@@ -1,4 +1,33 @@
-# ResolveDependency
-Dependency Output function    Let’s consider a database schema migration scenario which database tables needs to be exported from one database and imported to some other database. The problem statement is that if a table A has a reference(foreign_key) to table B(primary_key). Table A can be imported only if table B is already imported.    Example    Consider “A”: [“B”] means “A” is dependent on “B” (A → B)  “B”: [“C”] means “B” is dependent on “C” (B → C)  Where “A”, “B” and “C” are database tables. In the above use case the output (import sequence) of the program will be [“C”, “B”, “A”].
-# To run app ==> node app.js
-# To run test ==> jest
+# StringManipulation
+1.	A function to take in a string and return a string that is itself with the reverse of it interwoven together. For example, "ab12" would be"ab12" and "21ba" interwoven to make: "a2b11b2a"
+2.	A function to check a string to see if it is a palindrome. Spaces should be ignored. For example:
+
+Sample Text	Result
+taco cat	true
+some men interpret nine memos	true
+never odd or even	true
+This is not a palindrome	false
+1 test for numerics	false
+289982	true
+1234321	true
+
+3.	A mapping function that takes in a string of json payload and another string of mappings and returns a string of the mapped data. For example a payload of:
+{
+"Name" : "Hello",
+"This" : {
+"That" : {
+“TheOther” : "There"
+}
+}
+}
+And a map of:
+{
+"Test_Name" : "Name",
+"Test_Value" : "This.That.TheOther"
+}
+Should return:
+{
+"Test_Name" : "Hello",
+"Test_Value" : "There"
+}
+
